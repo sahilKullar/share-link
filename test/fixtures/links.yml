@@ -1,0 +1,9 @@
+linkOne:
+  title: title
+  url: mysite.com
+  user: one
+
+linkTwo:
+  title: myTitle
+  url: anothersite.com
+  user: one
