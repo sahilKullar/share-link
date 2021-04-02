@@ -11,11 +11,15 @@
 
 <body>
 <% if user_signed_in? %>
-  <%= link_to('Edit Account', edit_user_registration_path) %>
-  <%= link_to('Sign Out', destroy_user_session_path) %>
+  <ul>
+    <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+    <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+  </ul>
 <% else %>
-  <%= link_to('Sign Up', new_user_registration_path) %>
-  <%= link_to('Sign In', user_session_path) %>
+  <ul>
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
+  </ul>
 <% end %>
 <%= yield %>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
